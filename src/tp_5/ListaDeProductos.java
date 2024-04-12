@@ -62,7 +62,7 @@ public class ListaDeProductos extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 204));
-        jLabel1.setText("Gestion de Productos");
+        jLabel1.setText("Gestión de Productos");
 
         comboBoxCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ropa", "Electronica", "Alimentos" }));
 
@@ -193,7 +193,6 @@ public class ListaDeProductos extends javax.swing.JFrame {
     private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
         double precioProducto=0;
         String nombreProducto = campoNombreProducto.getText();
-        
         String categoria = (String) comboBoxCategoria.getSelectedItem();
         try{
             precioProducto = Integer.parseInt(campoPrecioProducto.getText());
@@ -204,7 +203,6 @@ public class ListaDeProductos extends javax.swing.JFrame {
             return;
         }
         
-       
         limpiar();
         
         Producto p=new Producto(nombreProducto, precioProducto, categoria);
